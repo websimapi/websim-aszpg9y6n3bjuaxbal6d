@@ -62,6 +62,7 @@ const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
 function getIntersection(x, y) {
+    if (!game.earth) return [];
     mouse.x = (x / window.innerWidth) * 2 - 1;
     mouse.y = -(y / window.innerHeight) * 2 + 1;
     raycaster.setFromCamera(mouse, camera);

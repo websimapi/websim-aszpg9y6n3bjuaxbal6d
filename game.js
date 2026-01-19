@@ -44,6 +44,10 @@ export class Game {
         this.init();
     }
 
+    get earth() {
+        return this.earthManager ? this.earthManager.earth : null;
+    }
+
     setPlayerInfo(info) {
         this.playerInfo = info;
         const avatarEl = document.getElementById('player-avatar');
